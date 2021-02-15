@@ -6,10 +6,12 @@ from src.routes import routes
 
 
 def create_app(config_file='config.py'):
+    """Create instance of Flask and registers blueprints
+    """
     app = Flask(__name__)
 
     app.config.from_pyfile(config_file)
-    
+
     # Blueprints
     app.register_blueprint(routes.bp)
 
