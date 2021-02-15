@@ -3,7 +3,6 @@
 # Exit if any command fails
 set -e
 
-
 # Install Python3
 sudo apt install python3
 
@@ -15,3 +14,6 @@ pip3 install pipenv
 
 # Install python packages
 pipenv install
+
+# Create Database File
+echo "{}" > ml_models/db.json
