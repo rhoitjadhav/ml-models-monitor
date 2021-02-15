@@ -63,16 +63,16 @@ python test.py
 
 Project consists of two main applications i.e ml_monitor and ml_models. Each application is based on flask and its directory structure & file conventions. Same overview is presented below:
 
-- Pipfile -> Pipenv configuration file
-- Pipfile.lock-> Contains packages dependencies configuration
-- app.py -> Entry point of the application
-- src -> Application specific modules
-- models -> Database interface api is defined in this module
-- routes -> APIs are defined in this module for the applications
-- usecases -> All the use cases implemented by the application are defined in this module
+- **Pipfile** -> Pipenv configuration file
+- **Pipfile.lock** -> Contains packages dependencies configuration
+- **app.py** -> Entry point of the application
+- **src** -> Application specific modules
+- **models** -> Database interface api is defined in this module
+- **routes** -> APIs are defined in this module for the applications
+- **usecases** -> All the use cases implemented by the application are defined in this module
 
-- config.py -> All the application configuration variables are placed in this file
-- db.json -> Database file
-- run_model.py -> This program trains the ml models (housing_price, payment_fraud) and push the result to the database
-- test.py -> By executing this file, it initiates the testing and shows results of test cases
-- housing_price & payment_fraud -> Machine Learning models
+- **config.py** -> All the application configuration variables are placed in this file
+- **db.json** -> Database file
+- **run_model.py** -> This program trains the ml models (housing_price, payment_fraud) and push the result to the database
+- **test.py** -> By executing this file, it initiates the testing and shows results of test cases
+- **housing_price & payment_fraud** -> Machine Learning models
