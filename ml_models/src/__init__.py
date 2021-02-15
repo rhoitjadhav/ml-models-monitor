@@ -5,8 +5,13 @@ from flask import Flask
 from src.routes import routes
 
 
-def create_app(config_file='config.py'):
+def create_app(config_file: str = 'config.py') -> object:
     """Create instance of Flask and registers blueprints
+    Args:
+        config_file: path of configuration file
+
+    Returns:
+        object: Flask instance
     """
     app = Flask(__name__)
 

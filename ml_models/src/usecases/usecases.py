@@ -1,5 +1,9 @@
 class Usecases:
-    def __init__(self, db):
+    def __init__(self, db: object):
+        """
+        Args:
+            db: database interface object
+        """
         self._db = db
 
     def get_all_models(self) -> dict:

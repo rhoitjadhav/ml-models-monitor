@@ -11,7 +11,12 @@ from src.models.local_database import LocalDatabase
 
 
 class Model:
-    def __init__(self, dataset_file, db):
+    def __init__(self, dataset_file: str, db: object) -> None:
+        """
+        Args:
+            dataset_file: path to dataset file
+            db: database interface object
+        """
         self._dataset_file = dataset_file
         self._db = db
         self._lr = LogisticRegression()
@@ -23,9 +28,13 @@ class Model:
         self._predictions = None
 
     def read_csv(self):
+        """Read dataset file and assigns dataframe object to _df"""
+
         self._df = pd.read_csv(self._dataset_file)
 
     def train_test_split(self):
+        """Splits the dataset in to training set and testing set"""
+
         X = self._df[['accountAgeDays', 'numItems',
                       'localTime', 'paymentMethodAgeDays']]
         y = self._df['label']
@@ -33,13 +42,17 @@ class Model:
         self._X_train, self._X_test, self._y_train, self._y_test = train_test_split(
             X, y, test_size=0.4, random_state=42)
 
-    def train(self):
+    def train(self) -> None:
+        """Trains model"""
         self._lr.fit(self._X_train, self._y_train)
 
-    def test(self):
+    def test(self) -> None:
+        """Predict results by passing testing set"""
         self._predictions = self._lr.predict(self._X_test)
 
-    def add_metrics_to_db(self):
+    def add_metrics_to_db(self) -> None:
+        """Add performance metrics to database"""
+
         model = {
             'id': 'model2',
             'name': 'Payment Fraud Detection',
