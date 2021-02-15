@@ -4,7 +4,7 @@ ML Models Monitoring system allows you to monitor the models which are being use
 
 ## Installation
 
-install.sh will install all dependencies required to run this application which includes python 3, pip, sqlite database and other required packages which is defined in requirements.txt. Additionally it will ask you for the permission to install the pacakges.
+`install.sh` will install all dependencies required to run this application which includes python 3, pip, sqlite database and other required packages which is defined in requirements.txt. Additionally it will ask you for the permission to install the pacakges.
 
 ```bash
 ./install.sh
