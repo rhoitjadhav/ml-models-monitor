@@ -4,7 +4,7 @@ ML Models Monitoring system allows you to monitor the models which are being use
 
 ## Installation
 
-`install.sh` will install all dependencies required to run this application which includes python 3, pip, sqlite database and other required packages which is defined in requirements.txt. Additionally it will ask you for the permission to install the pacakges.
+`install.sh` will install all dependencies required to run this application which includes python 3, pip and other required packages which is defined in Pipfile.lock file. Additionally it will ask you for the permission to install the pacakges.
 
 ```bash
 ./install.sh
@@ -12,12 +12,11 @@ ML Models Monitoring system allows you to monitor the models which are being use
 
 ## Requirements
 
-Python 3 and pip will be installed via install.sh file which is covered in Installation section. In ubuntu 18.04 python 3 is built-in package which is already installed in the system.
+Python 3 and pip will be installed via install.sh file which is covered in Installation section. In ubuntu 20.04 python 3 is built-in package which is already installed in the system.
 
-- Ubuntu 18.04
-- Python 3.6
-- pip
-- Sqlite3 Database
+- Ubuntu 20.04
+- Python 3.8
+- pipenv
 
 ## Run application
 
